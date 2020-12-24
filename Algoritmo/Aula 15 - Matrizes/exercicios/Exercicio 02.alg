@@ -1,322 +1,177 @@
 algoritmo "semnome"
-// Exercicio 02
-// Jogo da Velha
-Procedimento carregarTab()
+
 var
-   number:Inteiro
-   i, j:Inteiro
+   tabuleiro: vetor[1..3, 1..3] de Caractere
+   posicao, jogada, jogador, ganhador: Caractere
+   conte:Inteiro
+
+   
+
+//Inicia tabuleiro com os numeros
+procedimento iniciarTabuleiro()
 inicio
-     tab[1, 1] <- "1"
-     tab[1, 2] <- "2"
-     tab[1, 3] <- "3"
-     tab[2, 1] <- "4"
-     tab[2, 2] <- "5"
-     tab[2, 3] <- "6"
-     tab[3, 1] <- "7"
-     tab[3, 2] <- "8"
-     tab[3, 3] <- "9"
+       tabuleiro[1,1] <- "1"
+       tabuleiro[1,2] <- "2"
+       tabuleiro[1,3] <- "3"
+       tabuleiro[2,1] <- "4"
+       tabuleiro[2,2] <- "5"
+       tabuleiro[2,3] <- "6"
+       tabuleiro[3,1] <- "7"
+       tabuleiro[3,2] <- "8"
+       tabuleiro[3,3] <- "9"
 FimProcedimento
 
-Procedimento exibirTab()
+//Exibe o tabuleiro
+Procedimento exibirTabuleiro
 var
-   i, j:Inteiro
+   i,j:Inteiro
 inicio
       Para i <- 1 ate 3 faca
            Para j <- 1 ate 3 faca
-                Escreva(tab[i, j]:5)
+                Escreva(tabuleiro[i,j]:5)
            FimPara
            Escreval()
       FimPara
 
 FimProcedimento
 
-funcao jogar(v:Inteiro):Caractere
-inicio
-      Escolha(v)
-                       caso 1
-
-                         Se ((tab[1,1] = "X") ou (tab[1,1] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[1,1] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 2
-                         Se ((tab[1,2] = "X") ou (tab[1,2] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[1,2] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 3
-                         Se ((tab[1,3] = "X") ou (tab[1,3] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[1,3] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 4
-                         Se ((tab[2,1] = "X") ou (tab[2,1] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[2,1] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 5
-                         Se ((tab[2,2] = "X") ou (tab[2,2] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[2,2] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 6
-                         Se ((tab[2,3] = "X") ou (tab[2,3] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[2,3] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 7
-                         Se ((tab[3,1] = "X") ou (tab[3,1] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[3,1] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 8
-                         Se ((tab[3,2] = "X") ou (tab[3,2] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[3,2] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-                    caso 9
-                         Se ((tab[3,3] = "X") ou (tab[3,3] = "O"))entao
-                              Escreval("Posicao INVALIDA. Escolha outra posicao.")
-                              jogador <- jogador
-                              retorne "i"
-                         senao
-                              tab[3,3] <- jogador
-
-                              Se(jogador = "X")entao
-                                         jogador <- "O"
-                              senao
-                                         jogador <- "X"
-                              FimSe
-                              Retorne "v"
-                         FimSe
-          FimEscolha
-
-FimFuncao
-
-Funcao primeiraL(letra:Caractere):caractere
+//Realiza uma jogada
+Funcao jogar(letra, posicao:Caractere):Caractere
 var
+   validaJogada:Caractere
 inicio
-      Se ((tab[1,1] = letra) e (tab[1,2] = letra) e (tab[1,3] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-Funcao segundaL(letra:Caractere):caractere
-var
-inicio
-      Se ((tab[2,1] = letra) e (tab[2,2] = letra) e (tab[2,3] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-Funcao terceiraL(letra:Caractere):caractere
-var
-inicio
-      Se ((tab[3,1] = letra) e (tab[3,2] = letra) e (tab[3,3] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-Funcao primeiraC(letra:Caractere):caractere
-var
-inicio
-      Se ((tab[1,1] = letra) e (tab[2,1] = letra) e (tab[3,1] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-Funcao segundaC(letra:Caractere):caractere
-var
-inicio
-      Se ((tab[1,2] = letra) e (tab[2,2] = letra) e (tab[3,2] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-Funcao terceiraC(letra:Caractere):caractere
-var
-inicio
-      Se ((tab[1,3] = letra) e (tab[2,3] = letra) e (tab[3,3] = letra))entao
-           Retorne "G"
-      senao
-           Retorne ""
-      FimSe
-
-FimFuncao
-
-
-Funcao verificaGanhador():Caracter
-var
-   gamer:Caractere
-   nub, i, j:Inteiro
-inicio
-      Se(primeiraL() = "G")entao
-           Retorne "G"
-      senao
-            Se(segundaL() = "G")entao
-                        Retorne "G"
-            senao
-                 Se(terceiraL() = "G") entao
-                              Retorne "G"
-                 senao
-                       Se(primeiraC() = "G") entao
-                            Retorne "G"
-                       senao
-                           Se(segundaC() = "G") entao
-                                 Retorne "G"
-                            senao
-                                Se(terceiraC() = "G") entao
-                                             Retorne "G"
-                                senao
-                                      retorne ""
-                                FimSe
-                            FimSe
-                       FimSe
-                 FimSe
-            FimSe
-      FimSe
+      validaJogada <- "invalido"
       
-
-
+       Se ((posicao = "1") e (tabuleiro[1,1] = "1"))entao
+          tabuleiro[1,1] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "2") e (tabuleiro[1,2] = "2"))entao
+          tabuleiro[1,2] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "3") e (tabuleiro[1,3] = "3"))entao
+          tabuleiro[1,3] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "4") e (tabuleiro[2,1] = "4"))entao
+          tabuleiro[2,1] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "5") e (tabuleiro[2,2] = "5"))entao
+          tabuleiro[2,2] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "6") e (tabuleiro[2,3] = "6"))entao
+          tabuleiro[2,3] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "7") e (tabuleiro[3,1] = "7"))entao
+          tabuleiro[3,1] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "8") e (tabuleiro[3,2] = "8"))entao
+          tabuleiro[3,2] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Se ((posicao = "9") e (tabuleiro[3,3] = "9"))entao
+          tabuleiro[3,3] <- letra
+          validaJogada <- "valido"
+       FimSe
+       
+       Retorne validaJogada
 FimFuncao
 
-
+// Verifica se tem Ganhador
+procedimento verificaGanhador(jog:Caractere)
 var
-   tab:vetor[1..3, 1..3] de Caractere
-   continue:Caractere
-   jogador:Caractere
-   posicao: Inteiro
-   jogada:Caractere
+   letraXO:Caractere
+   i:Inteiro
 inicio
-      continue <- "SIM"
-      jogador <- "X"
-      jogada <- "v"
-      carregarTab()
-      
+      letraXO <- "X"
+      Para i <- 1 ate 2 faca
+             Se((tabuleiro[1,1] = letraXO) e (tabuleiro[1,2] = letraXO) e (tabuleiro[1,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+             Se((tabuleiro[2,1] = letraXO) e (tabuleiro[2,2] = letraXO) e (tabuleiro[2,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+             Se((tabuleiro[3,1] = letraXO) e (tabuleiro[3,2] = letraXO) e (tabuleiro[3,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+             Se((tabuleiro[1,1] = letraXO) e (tabuleiro[2,1] = letraXO) e (tabuleiro[3,1] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+              Se((tabuleiro[1,2] = letraXO) e (tabuleiro[2,2] = letraXO) e (tabuleiro[3,2] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+              Se((tabuleiro[1,3] = letraXO) e (tabuleiro[2,3] = letraXO) e (tabuleiro[3,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+             
+              Se((tabuleiro[1,1] = letraXO) e (tabuleiro[2,2] = letraXO) e (tabuleiro[3,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+              Se((tabuleiro[3,1] = letraXO) e (tabuleiro[2,2] = letraXO) e (tabuleiro[1,3] = letraXO))entao
+                  ganhador <- letraXO
+             FimSe
+             
+             
+             letraXO <- "O"
+      FimPara
+
+
+FimProcedimento
+
+inicio
+       iniciarTabuleiro()
+       jogador <- "X"
+       ganhador <- "Sem Ganhador"
+       conte <- 1
+       
       Repita
-            Se(jogada = "valida")entao
-                      LimpaTela
-            FimSe
-            LimpaTela
-          exibirTab()
-          Escreval("Vai jogar [", jogador, "] em qual posicao?")
-           Leia(posicao)
-          Repita
-                jogada <- jogar(posicao)
-                Se(jogada = "i")entao
-                     Escreva("Posicao: ")
-                     Leia(posicao)
-                FimSe
-                
+         exibirTabuleiro()
+         Repita //repetir ate que a jagada seja valida
+               Escreval("Escolha uma Posicao para [", jogador,"]: ")
+               Leia(posicao)
+               
+               jogada <- jogar(jogador, posicao)
+               
+               Se(jogada = "invalido")entao//Caso a Jogada seja Invalido
+                    Escreva("Jogada INVALIDA. ")
+               senao//caso a jogada seja valido
+                    verificaGanhador(jogador)
+                    Se (jogador = "X")entao
+                       jogador <- "O"
+                    senao
+                       jogador <- "X"
+                    FimSe
+                    LimpaTela
+               FimSe
 
+         Ate(jogada = "valido")
+         
+         Se (conte >= 9)entao
+              ganhador <- "EMPATE"
+         senao
+              conte <- conte + 1
+         FimSe
+      Ate(ganhador <> "Sem Ganhador")
+      
+      exibirTabuleiro()
 
-          Ate(jogada = "v")
-          
-          Se(verificaGanhador() = "G")entao
-                Escreval("Fim Partida")
-                continue <- "NAO"
-          senao
-               continue <- "SIM"
-          FimSe
-          
-      Ate(continue = "NAO")
-
-
-
+      Se(ganhador = "EMPATE") entao
+            Escreval("FIM DA PARTIDA. ", ganhador, "!")
+      senao
+           Escreval("FIM DA PARTIDA. O [", ganhador, "] ganhou!")
+      FimSe
 
 fimalgoritmo
