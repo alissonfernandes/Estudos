@@ -18,47 +18,46 @@
             &lt;/picture&gt;
         </code>
     </pre>
+    <hr>
+
     <h2>Tags</h2>
     <ul>
         <li><code>&lt;picture&gt;</code></li>
-        <hr>
-        <li>
-            <code>&lt;source&gt;</code>
-            <ul>
-                <li>
-                    <h3>Parâmetro: <code>media=""</code></h3>
-                    <p>
-                        Indica o tamanho máximo ou mínimo a ser considerado para carregar a imagem indicada no atributo <code>srcset</code>
-                    </p>
-                    <ul>
-                        <li>Exemplo para valores: <code>media="(max-width: 750px)</code></li>
-                        <li>Exemplo para valores: <code> media="(max-width: 1050px)</code></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Parâmetro: <code>srcset=""</code></h3>
-                    <p>
-                        Vai configurar o nome/ diretório da imagem que será carregada quando o tamanho indicado for atingido.
-                    </p>
-                    <ul>
-                        <li>Exemplo: <code>srcset="photo.png"</code></li>
-                    </ul>    
-                </li>
-                <li>
-                    <h3>Parâmetro: <code>type=""</code></h3>
-                    <p>
-                        Vai indicar o <em>media type</em> da imagem que usamos
-                    </p>
-                    <ul>
-                        <li>image/png</li>
-                    </ul>
-                </li>
-            </ul>
-            
-        </li>
-        
-       
+        <li><code>&lt;source&gt;</code></li>
     </ul>
-    <h3></h3>
+    <hr>
+
+    <h2>Parâmetros: <code>&lt;picture&gt;</code></h2>
+    <hr>
+
+    <h2>Parâmetros: <code>&lt;source&gt;</code></h2>
+    <ul>
+        <li><code>media</code>
+            <p>
+                Indica o tamanho máximo ou mínimo a ser considerado para carregar a imagem indicada no atributo <code>srcset</code>
+            </p>
+            <ul type="square">
+                <li>Exemplo para valores: <code>media="(max-width: 750px)</code></li>
+                <li>Exemplo para valores: <code> media="(max-width: 1050px)</code></li>
+            </ul></li>
+        <li><code>srcset</code>
+            <p>
+                Vai configurar o nome/diretório da imagem que será carregada quando o tamanho indicado for atingido.
+            </p>
+            <ul type="square">
+                <li>Exemplo: <code>srcset="photo.png"</code></li>
+            </ul>    
+        </li>
+        <li><code>type</code>
+            <p>
+                Vai indicar o <em>media type</em> da imagem que usamos
+            </p>
+            <ul type="square">
+                <li>image/png</li>
+                <li>image/jpeg</li>
+                <li>Para ver mais: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">IANA.org</a></li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
