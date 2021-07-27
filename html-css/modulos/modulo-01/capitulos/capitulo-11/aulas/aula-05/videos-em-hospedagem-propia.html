@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo em hospedagem própia</title>
+</head>
+<body>
+    <h1>Vídeo em hospedagem própia</h1>
+    <hr>
+
+    <h2>Exemplo de código</h2>
+    <pre>
+    <code>
+        &lt;video src="../ex019/midia/meu-video.mp4" width="500" controls&gt;&lt;/video&gt;
+        &lt;br&gt;
+        &lt;video controls poster="img/money.jpg" width="500"&gt;
+             &lt;source src="../ex019/midia/meu-video.mp4" type="video/mp4"&gt;
+             &lt;p&gt;
+                 Seu navegador não tem compatibilidade com reprodução de vídeos.
+             &lt;/p&gt;
+        &lt;/video&gt;
+    </code>
+    </pre>
+    <hr>
+
+    <h2>tags</h2>
+    <ul>
+        <li>video</li>
+        <li><code>source</code></li>
+    </ul>
+    <hr>
+
+    <h2>Parâmetros: <code>&lt;video&gt;</code></h2>
+    <ul>
+        <li><code>src</code>
+            <p>
+                Diretório onde esta localizado o arquivo no qual deseja exibir.
+            </p>
+        </li>
+        <li><code>controls</code>
+            <p>
+                Adiciona controladores
+            </p>
+        </li>
+        <li><code>poster</code>
+        <p>Adiciona uma imagem de fundo de vídeo antes de reproduzi-lo. Para isso você deve informar o caminho da imagem</p></li>
+    </ul>
+    <hr>
+
+    <h2>Parâmetros: <code>&lt;source&gt;</code></h2>
+    <ul>
+        <li><code>src</code>
+            <p>
+                Diretório onde esta localizado o arquivo no qual deseja exibir.
+            </p>
+        </li>
+        <li><code>type</code>
+            <p>
+                Vai indicar o <em>media type</em> do vídeo que usamos
+            </p>
+            <ul type="square">
+                <li>video/mp4</li>
+                <li>video/webm</li>
+                <li>video/ogv</li>
+                <li>video/m4v</li>
+                <li>Para ver mais: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">IANA.org</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
