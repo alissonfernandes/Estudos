@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos CSS Externos</title>
+</head>
+<body>
+    <h1>Estilos CSS Externos</h1>
+
+    <hr>
+    <h2>Exemplo de código</h2>
+    <h3>File: index.html</h3>
+    <pre>
+        <code>
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Estilos CSS Externos&lt;/title&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        </code>
+    </pre>
+
+    <h3>File: segunda-pagina.html</h3>
+    <pre>
+        <code>
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&lt;Segunda página&lt;/title&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        </code>
+    </pre>
+
+    <h3>File: style.css</h3>
+    <pre>
+        <code>
+            @charset "UTF-8";
+            body{
+                background-color: lightskyblue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            h1{
+                color: darkblue;
+                background-color: lightblue;
+            }
+            h2{
+                color: darkred;
+            }
+            p{
+                text-align: justify;
+            }
+        </code>
+    </pre>
+    <hr>
+
+    <h2>Tag:</h2>
+    <ul>
+        <li><code>link</code></li>
+    </ul>
+    <hr>
+
+    <h2>Parâmetros<code> &lt;link&gt;</code></h2>
+    <ul>
+        <li><code>rel</code>
+            <p>
+                Tipo do arquivo. Exemplo: <strong><code>stylesheet</code></strong>
+            </p>
+        </li>
+        <li><code>href</code>
+            <p>
+                Nome e local onde esta localizado o arquivo
+            </p>
+        </li>
+    </ul>
+</body>
+</html>
