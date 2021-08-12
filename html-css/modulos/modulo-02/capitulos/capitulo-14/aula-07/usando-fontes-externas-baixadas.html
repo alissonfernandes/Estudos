@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes baixadas</title>
+</head>
+<body>
+    <h1>Usando fontes externas baixadas</h1>
+    <h2>Exemplo de código</h2>
+    <pre>
+        <code>
+            @font-face {
+                font-family: 'Love';
+                src: url('fonts/Feeling Lovely.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Love two';
+                src: url('fonts/love\ story.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body{
+                font-family: 'Love two', Helvetica, sans-serif;
+            }
+            h1, h2{
+                font-family: 'Love', Times, serif;
+                font-size: 3em;
+            }
+        </code>
+    </pre>
+    <h2>Site para fonts</h2>
+    <ul>
+        <li><a href="https://www.dafont.com" rel="external" target="_blank">DaFont</a></li>
+    </ul>
+    <h2>Tipos de <code>format()</code></h2>
+    <ul>
+        <li>opentype (otf)</li>
+        <li>truetype (ttf)</li>
+        <li>embedded-opentype</li>
+        <li>truetype-aat (Apple Advanced Typography)</li>
+        <li>SVG</li>
+    </ul>
+</body>
+</html>
