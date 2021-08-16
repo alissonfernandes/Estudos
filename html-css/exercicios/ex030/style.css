@@ -13,3 +13,13 @@ h1#principal {
 h2 {
     color: chocolate;
 }
+
+.basico {
+    color: rgb(245, 205, 190);
+    background-color: rgb(138, 76, 54);
+    text-align: center;
+}
+
+.intermediario {
+    text-decoration: underline;
+}
