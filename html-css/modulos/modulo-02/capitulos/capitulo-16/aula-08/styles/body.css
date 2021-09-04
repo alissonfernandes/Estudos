@@ -1,0 +1,77 @@
+/*style body*/
+
+@font-face {
+    font-family: 'indroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: aquamarine;
+}
+main {
+    width: 900px;
+    margin: auto;
+    padding: 0;
+    background-color: whitesmoke;
+    margin-top: -16px;
+}
+
+h2 {
+    font-family: indroid;
+}
+
+h3 {
+    font-family: indroid;
+    padding: 1px 10px;
+    background-color: aquamarine;
+}
+
+.img-center{
+    text-align: center;
+}
+
+section#one{
+    padding: 15px;
+}
+
+section#two {
+    padding: 0px;
+}
+
+section#two {
+    background-color: green;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+section#three{
+    padding: 25px;
+}
+
+#box {
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+#title{
+    display: none;
+}
+#box h3{
+    background-color: green;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    padding: 20px;
+}
+
+footer{
+    text-align: center;
+    background-color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
