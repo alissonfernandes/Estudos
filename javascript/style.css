@@ -1,0 +1,26 @@
+body {
+    background-color: cornflowerblue;
+    margin: 0;
+    color:rgb(59, 64, 68);
+}
+
+main {
+    margin: auto;
+    max-width: 800px;
+    background-color: rgb(229, 235, 241);
+    padding: 1vw;
+    box-shadow: 1px 1px 5px rgba(36, 35, 35, 0.747);
+}
+h1 {
+    font: normal 25pt Arial;
+    text-align: center;
+}
+a.button-prev{
+    text-decoration: none;
+    background-color: steelblue;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    font: normal 11pt Arial;
+    margin-top: 20px;
+}
