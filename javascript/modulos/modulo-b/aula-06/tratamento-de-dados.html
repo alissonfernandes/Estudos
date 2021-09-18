@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Tratamento de dados</title>
+</head>
+<body>
+    <main>
+        <h1>Tratamento de dados</h1>
+        <h2>Conversão de dados</h2>
+        <p>
+            <code>Number.parseFloat</code> - Converte uma string ou inteiro para real
+            <br>
+            <code>Number.parseInt</code> - Converte uma string ou float para inteiro
+            <br>
+            <code>Number</code> - converte uma string para número
+            <br>
+            <code>String</code> - converte número para string
+            <br>
+            <code>n.toString</code> - possui a mesma funcionalidade do <em>String</em>: converte número para string
+            
+            <br> 
+        </p>
+        <h2>Formatação de string</h2>
+        <p>
+            <code>s.toUpperCase</code> - coloca todas as letras em maiúsculas
+            <br>
+            <code>s.toLowerCase</code> - coloca todas as letras em minúsculas
+            <br>
+            <code>s.length</code> - mostra quantos caracteres tem a string
+        </p>
+        <h2>Formatação de números</h2>
+        <p>
+            <code>n1.toFixed(2)</code> - formata um número para duas casas decimais
+            <code>n1.replace('.', ',')</code> - troca uma string pela outra
+            <code>n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</code> - formata um número para valor monetário
+        </p>
+    </main>
+    <script>
+        var nome = window.prompt("Nome: ");
+        var length = Number(nome.length);
+
+        window.alert(`Olá, ${nome.toUpperCase()}. Seu nome tem ${length} letras`);
+        
+        
+    </script>
+</body>
+</html>
