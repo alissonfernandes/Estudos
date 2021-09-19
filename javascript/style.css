@@ -24,3 +24,7 @@ a.button-prev{
     font: normal 11pt Arial;
     margin-top: 20px;
 }
+.center {
+    display: block;
+    margin: auto;
+}

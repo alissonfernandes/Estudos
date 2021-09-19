@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 28pt Arial;
+            background-color: rgb(8, 75, 53);
+            color: azure;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+        div#calc {
+            width: 500px;
+            height: 100px;
+        }
+      
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Eventos DOM</h1>
+        <h2>Eventos</h2>
+        <ul>
+            <li>mouseenter</li>
+            <li>mousemove</li>
+            <li>mousedown</li>
+            <li>mouseup</li>
+            <li>click</li>
+            <li>mouseout</li>
+            <li>addEventListener</li>
+        </ul>
+        <hr>
+        
+        <h2>Exercício 1</h2>
+        <div class="center" id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            Interaja.
+        </div>
+        <hr>
+        
+        <h2>Exercício2</h2>
+        <div id="calc" class="center" style="margin-top: 50px;">
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" onclick="somar()">
+            <br>
+            <span id="res"></span>
+        </div>
+
+        <a class="button-prev" href="../../../index.html" rel="prev">Voltar</a>
+    </main>
+    <script>
+          var a = window.document.getElementById('area');
+
+          a.addEventListener('click', clicar);
+          a.addEventListener('mouseenter', entrar);
+          a.addEventListener('mouseout', sair);
+
+
+        function clicar(){
+            a.innerHTML = '<strong style="color:yellow;">Clicou</strong>';
+        }
+        function entrar(){
+            a.innerHTML = '<strong style="color:yellow;">Entrou</strong>';
+        }
+        function sair(){
+            a.innerHTML = '<strong style="color:yellow;">Saiu</strong>';
+        }
+        function somar(){
+            var txtn1 = window.document.getElementById('txtn1');
+            var txtn2 = window.document.getElementById('txtn2');
+            var n1 = Number(txtn1.value);
+            var n2 = Number(txtn2.value)
+
+            var res = window.document.querySelector('span#res');
+
+            res.innerHTML = `A soma entre <strong>${n1}</strong> e <strong>${n2}</strong> é <strong>${n1+n2}</strong>`
+        }
+    </script>
+</body>
+</html>
