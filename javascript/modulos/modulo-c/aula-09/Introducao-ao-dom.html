@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Introdução ao DOM</title>
+</head>
+<body>
+    <main>
+        <h1>Introdução ao DOM</h1>
+        <h2>O que é DOM?</h2>
+        <p id="p1">
+            É um acrônimo para <strong>Document Object Model</strong> (Modelo de Objetos para Documentos). Ele está presente quando você roda JavaScript dentro do seu navegador por isso, o DOM não funciona dentro do nodeJs, por exemplo.
+        </p>
+        <h2>Árvore DOM</h2>
+        <p>
+            Tudo, dentro do JavaScript, está dentro de uma raiz chamada <strong><code>window</code></strong> e dentro do window possui outros três principais objetos: <strong><code> location document history</code></strong>
+        </p>
+        <h3><code>location</code></h3>
+        <p>
+            Diz qual é a localização do seu site, qual é a URL, qual é a página atual e a página anterior.
+        </p>
+        <h3><code>document</code></h3>
+        <p>
+           Dentro desse documento possui outro obejeto muito importante que é o <code>html</code> e dentro do objeto html pussui outros dois objetos: <code>head</code> e <code>body</code>
+        </p>
+        <h3><code>hitory</code></h3>
+        <p>
+            É um histórico que guarda de onde você veio e para onde você vai
+        </p>
+        <p>
+            <code>window.document.chaset</code> - mostra o set de caractéres <br>
+            <code>window.navigator.appName</code> - mostra o nome do navegador atual <br>
+            <code>window.document.URL</code> - mostra a url da página
+        </p>
+        <h2>Tipos de seletores</h2>
+        <ul>
+            <li>por marca -> <code>getElementsByTagName()</code></li>
+            <li>por id -> <code>getElementById()</code></li>
+            <li>por nome -> <code>getElementsByName()</code></li>
+            <li>por classe -> <code>getElementsByClassName()</code></li>
+            <li>por Seletor -> <code>querySelector('div#p')</code></li>
+        </ul>
+        <a class="button-prev" href="../../../index.html" rel="prev">Voltar</a>
+    </main>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var p1Id = window.document.getElementById('p1');
+        window.document.write(p1Id.innerHTML);
+    </script>
+</body>
+</html>
