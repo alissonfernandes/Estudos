@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Condições | Parte 1</title>
+</head>
+<body>
+    <main>
+        <h1>Codições</h1>
+        <h2>Desvio condicional</h2>
+        <h3>Condição simples</h3>
+        <h3>Condição composta</h3>
+      
+        <hr>
+        <h2>Sistema de multas</h2>
+        <p>
+            Velocidade: <input type="number" name="vel"> 
+            <input type="button" value="Ver" onclick="calcular()">
+            <br>
+            <span id="res"></span>
+        </p>
+        <hr>
+       
+        <a class="button-prev" href="../../../index.html" rel="prev">Voltar</a>
+    </main>
+
+    <script >
+       
+        function calcular(){
+            var  vel = Number(document.getElementsByName('vel')[0].value)
+            var visor = document.getElementById('res');
+
+            if(vel > 60) {
+                visor.innerHTML = `Sua velocidade é <strong>${vel}</strong>km/h. Você ultrapassou a velocidade permitida. <strong style="color:red">MULTADO</strong>`;
+            } else {
+                visor.innerHTML = `Sua velocidade é <strong>${vel}</strong>km/h. Dirija sempre com o cinto de segurança`;
+            }
+        }
+
+        pais();
+        function pais(){
+            var pais = "Brasil";
+
+
+            if(pais != "Brasil"){
+                console.log(` Você é estrangeiro`)
+            } else {
+                console.log('Você é brasileiro')
+            }
+        }
+
+    </script>
+</body>
+</html>
