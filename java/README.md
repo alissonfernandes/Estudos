@@ -37,5 +37,10 @@
 
  Os lançamentos das versões *OpenJDK LTS* (suporte de longo prazo) acontcem pelo menos a cada quatro anos.
 
+## Links úteis
+ * [Instalação e fonfiguração de IDEs](https://github.com/cami-la/curso-dio-dominando-ides-java)
+ * [Download JDK](https://www.azul.com/downloads/?package=jdk)
+ * [Download IntelliJ](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
+
 
 
