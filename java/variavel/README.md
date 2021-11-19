@@ -43,3 +43,8 @@
  |String (e Objetos)|null|
  |boolean|false|
 
+## Conversões (casting)
+ É a transformação de uma determinada variável de tipo manos específico para um tipo mais específico ou vice-versa.
+ Para isso existem dois tipos de casting:
+ * Upcast (implícito)
+ * Downcast (explícito)
