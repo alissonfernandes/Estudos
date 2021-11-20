@@ -18,4 +18,11 @@ São símbolos especiais quais são capazes de realizar ações específicas em 
  |&lt;|Tamanho|Determina se um operando é menor do que outro|
  |&gt;=|Tamanho|Determina se um operando é maior ou igual a outro|
  |&lt;=|Tamanho|Determina se um opeando é menor ou igual a outro
- 
+
+ ## Operadores Lógicos
+ |Tipo|Simbologia|Conceituação|
+ |--- |---|---
+ |Conjunção|&&|Operação lógica que só é verdadeira quando ambos os operandos ou expressões envolvidas são verdade
+ |Disjunção|&#124; &#124;|Operação que só é falsa quando ambos os operandos ou expressões envolvidas são falsos
+ |Disjunção exclussiva|^|Operação que só é verdade quando ambos os operandos ou espressões são opostos|
+ |Negação|!|Operação que inverte o valor lógico de um operando ou expressão
