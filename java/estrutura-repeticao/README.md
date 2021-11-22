@@ -12,9 +12,15 @@ As estruturas de repetição podem ser classificadas em:
 * Repetição com teste no final (_`do while`_)
 * Repetição contada (_`for`_)
 
-O comando `break` é utilizado para determinar de forma abrupta uma repetição.
- 
-Quanto comando `continue` é executado, os comandos restantes da repetição são ignorados e programa volta a testar novamente ou não.
+## Interruptores
+São comandos que têm a capacidade de modifcar o fluxo de execução de _loops_ ou métodos.
+
+* **`break`**: utilizado para interromper de forma abrupta uma repetição da execução do `for`, `while` e `switch`
+
+* **`continue`**: utilizado para interromper de forma parcialmente uma repetição da execução do `for` e `while`. 
+ Quanto comando `continue` é executado, os comandos restantes da repetição são ignorados e programa volta a testar novamente ou não.
+
+* **`return`**: interrompe a execução de método
 
  ## LInks úteis
- * [Operadores de incremento e decremento](github.com/alissonfernandes/Estudos/tree/main/java/operadores)
+ * [Operadores de incremento e decremento](www.github.com/alissonfernandes/Estudos/tree/main/java/operadores)
